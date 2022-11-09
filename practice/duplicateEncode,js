@@ -1,0 +1,19 @@
+function duplicateEncode(word){
+    //first convert all the letter in same case and split into array
+    const newWords = word.toLowerCase().split("");
+    const char = []
+  newWords.forEach(e => {
+    //all the duplicate characters 
+    newWords.indexOf(e) !== newWords.lastIndexOf(e)? char.push(")") : char.push("(")
+    //using ternary operator to push punctuation to new array
+  });
+
+return char.join("")
+//return required join not array 
+
+   }
+   
+
+
+console.log(duplicateEncode("Din"))
+console.log(duplicateEncode("Success"))
